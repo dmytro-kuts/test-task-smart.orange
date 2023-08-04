@@ -1,0 +1,79 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.page {
+  padding-top: rem(102);
+  // .page__progect-slider
+  &__progect-slider {
+  }
+  // .page__about
+  &__about {
+  }
+  // .page__main-tasks
+  &__main-tasks {
+  }
+  // .page__progects
+  &__progects {
+  }
+  // .page__contacts
+
+  &__contacts {
+  }
+}
+// Title ========================================================================================================================================================
+.title {
+  @include adaptiveValue('font-size', 64, 36);
+  font-weight: 300;
+  line-height: 100%;
+  color: $lightGreyColor;
+  span {
+    font-weight: 700;
+    color: $mainColor;
+  }
+  transform: translate(0px, 80%);
+  opacity: 0;
+  &._watcher-view {
+    transform: translate(0px, 0);
+    opacity: 1;
+    transition: all 0.8s ease 0.2s;
+  }
+}
+// Text ========================================================================================================================================================
+
+.text {
+  color: $blackColor;
+  font-size: rem(16);
+  font-weight: 300;
+  line-height: 156.25%; /* 25/16 */
+}
+// animation ========================================================================================================================================================
+/**
+ * ----------------------------------------
+ * animation vibrate-1
+ * ----------------------------------------
+ */
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(0, 2px);
+    transform: translate(0, 2px);
+  }
+  40% {
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+  }
+  60% {
+    -webkit-transform: translate(0, 2px);
+    transform: translate(0, 2px);
+  }
+  80% {
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+//========================================================================================================================================================

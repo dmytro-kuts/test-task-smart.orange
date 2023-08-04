@@ -1,0 +1,57 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+  display: grid;
+  @include adaptiveValue('column-gap', 60, 0, 2, 1170, 768);
+
+  @media (min-width: $mobile) {
+    row-gap: rem(30);
+    grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+  }
+}
+// Спойлер
+.spollers__item {
+}
+// Заголовок спойлера
+.spollers__title {
+  font-size: rem(16);
+  font-weight: 700;
+  width: 100%;
+  cursor: default;
+  pointer-events: none;
+  text-align: left;
+  position: relative;
+  list-style: none;
+  &:not(:last-child) {
+    margin-bottom: rem(25);
+  }
+  @media (max-width: $mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  &::before {
+    display: none;
+  }
+  ._spoller-init & {
+    pointer-events: painted;
+    cursor: pointer;
+    &::before {
+      display: block;
+      font-size: rem(8);
+      transform: rotate(-180deg);
+      transition: transform 0.3s;
+    }
+    &._spoller-active {
+      &::before {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+// Контент спойлера
+.spollers__body {
+}
