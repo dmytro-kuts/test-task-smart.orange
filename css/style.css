@@ -526,9 +526,12 @@ h6 {
 }
 
 .header__logo {
+  z-index: 5;
+}
+
+.header__logo img {
   width: 4.375rem;
   height: 2.75rem;
-  z-index: 5;
 }
 
 .menu__list {
@@ -563,6 +566,11 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.footer__logo img {
+  width: 9.0625rem;
+  height: 5.875rem;
 }
 
 .footer__spollers {
