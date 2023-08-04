@@ -13,6 +13,10 @@
   }
   // .footer__logo
   &__logo {
+    img{
+      width: rem(145);
+      height: rem(94);
+    }
   }
   // .footer__spollers
   &__spollers {

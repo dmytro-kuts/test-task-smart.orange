@@ -45,8 +45,10 @@
   }
   // .header__logo
   &__logo {
-    width: rem(70);
-    height: rem(44);
+    img{
+      width: rem(70);
+      height: rem(44);
+    }
     z-index: 5; 
   }
   // .header__menu
